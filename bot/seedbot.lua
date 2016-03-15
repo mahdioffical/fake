@@ -27,7 +27,7 @@ function on_msg_receive (msg)
       match_plugins(msg)
       if redis:get("bot:markread") then
         if redis:get("bot:markread") == "on" then
-          mark_read(receiver, ok_cb, false)
+          mark_read(receiver, ok_cb, true)
         end
       end
     end
@@ -40,7 +40,7 @@ end
 
 function on_binlog_replay_end()
   started = true
-  postpone (cron_plugins, false, 60*5.0)
+  postpone (cron_plugins, true, 60*5.0)
   -- See plugins/isup.lua as an example for cron
 
   _config = load_config()
@@ -232,7 +232,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {211952272},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
