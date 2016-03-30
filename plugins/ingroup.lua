@@ -1727,7 +1727,7 @@ return {
   "^[#!/](setphoto)$",
   "^[#!/](promote) (.*)$",
   "^[#!/](promote)",
-  "^[#!/](help)$",
+ -- "^[#!/](help)$",
   "^[#!/](clean) (.*)$",
   "^[#!/](kill) (chat)$",
   "^[#!/](kill) (realm)$",
