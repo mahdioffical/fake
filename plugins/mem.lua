@@ -57,8 +57,7 @@ unblock_user("user#id"..user_id,ok_cb,false)
 				resolve_username(username, unblock_by_username, {receiver = receiver, msg=msg})
 			end
 		end 
-   end 
-   return {
+     return {
     patterns = {
 	"^[!/#](pvblock)$",
         "^[!/#](pvblock) (.*)$",
