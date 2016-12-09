@@ -67,4 +67,3 @@ unblock_user("user#id"..user_id,ok_cb,false)
     },
       run = run,
 }
-end
